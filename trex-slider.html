@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Slider Sandbox</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="initial-scale=1.0; user-scalable=yes;">
+    <style type="text/css">
+    
+    #trex-div {
+	box-sizing: border-box;
+	max-width: 1040px;
+	height: 100%;
+	display: block;
+	position: relative;
+	background: #aff;
+	margin-bottom: 30px;
+	margin-top: 30px;
+}
+
+.trex-container {
+	box-sizing: border-box;
+	border: thin solid #fff;
+	max-width: 768px;
+	padding: 0;
+	margin: 0;
+}
+
+#trexEmbed {
+	height: 600px;
+	width: 100%;
+}
+
+@media screen and (min-width:1028px) {
+	#trexEmbed {
+		box-sizing: border-box;
+		height: 600px;
+		overflow: hidden;
+		background: #eee;
+		margin: 0;
+	}
+}
+
+#img_container {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 484px;
+	display: inline-block;
+}
+
+ul.thumbscontainer {
+	list-style: none;
+	width: 100%;
+	position: relative;
+	max-height: 160px;
+	margin: 0;
+	padding: 0;
+	top: 5px;
+	left: 1px;
+}
+
+.thumbscontainer li.thumbnail img {
+	position: relative;
+	height: 80px;
+	width: 83px;
+}
+
+.thumbscontainer li {
+	float: left;
+	margin: 4px 1px 0;
+}
+
+.thumbscontainer li::after:last-child {
+	content: " ";
+	clear: both;
+	display: table;
+}
+
+.showSlide {
+	box-sizing: border-box;
+	display: none;
+}
+
+.showSlide img {
+	box-sizing: border-box;
+	width: 100%;
+}
+
+.slidercontainer {
+	box-sizing: border-box;
+	list-style: none;
+	max-width: 100%;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	z-index: 1;
+}
+
+.left-trx, .right-trx {
+	box-sizing: border-box;
+	cursor: pointer;
+	position: relative;
+	font-weight: bold;
+	font-size: 20px;
+	transition: 0.6s ease;
+	width: 32px;
+	height: 32px;
+	background-color: #eee;
+	color: blue;
+	z-index: 999;
+	padding: 5px;
+	border-radius: 50%;
+	text-align: center;
+}
+
+.left-trx {
+	left: 1em;
+	float: left;
+}
+
+.right-trx {
+	float: right;
+}
+
+.left-trx:hover, .right-trx:hover {
+	background-color: rgba(115, 115, 115, 0.8);
+}
+
+.trex-slide-nav {
+	width: 97.44%;
+	position: relative;
+	top: -256px;
+	height: 50px;
+}
+
+.trex-slide-nav:after {
+	content: "";
+	clear: both;
+}
+
+.content {
+	color: #eff5d4;
+	font-size: 30px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 10px;
+	width: 100%;
+	text-align: center;
+}
+
+.active {
+	background-color: #717171;
+}  
+        /* Fading animation */  
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  
+	from {
+		opacity: .4;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fade {
+  
+	from {
+		opacity: .4;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+</style>
+<body>
+<div class="trex-container">
+	<div id="trex-div">
+        <div id="trexEmbed">
+
+            <div id="img_container">
+        
+        
+                <ul class="slidercontainer">  
+              
+                    <li class="showSlide fade"><img src="https://3f2yjsz3q71x8x2b3bw93ad5-wpengine.netdna-ssl.com/wp-content/uploads/2017/01/trex-picture-portfolio-10-2-768x481.jpg" alt="A Trex Winchester Grey Seclusions backyard fence.">
+                        <div class="content">Lorem ipsum dolor sit amet</div>  </li>
+                    <li class="showSlide fade"><img class="nolazy sd2-slide-background" src="https://3f2yjsz3q71x8x2b3bw93ad5-wpengine.netdna-ssl.com/wp-content/uploads/2017/01/Trex-Seclusions-Saddle-Sidewalk-2-768x481.jpg" alt="A Trex Seclusions Saddle fence in a residential neigborhood." />
+                        <div class="content">Lorem ipsum dolor sit amet</div> </li>
+                
+                    <li class="showSlide fade"><img class="nolazy sd2-slide-background" src="https://3f2yjsz3q71x8x2b3bw93ad5-wpengine.netdna-ssl.com/wp-content/uploads/2017/01/A-Beautiful-Backdrop-for-Your-Personal-Space-2-768x481.jpg" alt="" />
+                        <div class="content">Lorem ipsum dolor sit amet</div> </li>
+                
+                    <li class="showSlide fade"><img class="nolazy sd2-slide-background" src="https://3f2yjsz3q71x8x2b3bw93ad5-wpengine.netdna-ssl.com/wp-content/uploads/2017/01/A-Tall-Fence-is-Easily-Acheivable-with-Trex-2-768x481.jpg" alt="" />
+                        <div class="content">Lorem ipsum dolor sit amet</div> </li>
+                
+                    <li class="showSlide fade"><img class="nolazy sd2-slide-background" src="https://3f2yjsz3q71x8x2b3bw93ad5-wpengine.netdna-ssl.com/wp-content/uploads/2017/01/Trex-Seclusions-Saddle-Trees-2-768x481.jpg" alt="" />
+                        <div class="content">Lorem ipsum dolor sit amet</div> </li>
+                
+                    <li class="showSlide fade"><img class="nolazy sd2-slide-background" src="https://3f2yjsz3q71x8x2b3bw93ad5-wpengine.netdna-ssl.com/wp-content/uploads/2017/01/Trex-Seclusions-Winchester-Grey-Section-2-768x481.jpg" alt="" />
+                        <div class="content">Lorem ipsum dolor sit amet</div> </li>
+                
+                    <li class="showSlide fade"><img class="nolazy sd2-slide-background" src="https://3f2yjsz3q71x8x2b3bw93ad5-wpengine.netdna-ssl.com/wp-content/uploads/2017/01/Contractors-Love-Satisfied-Customers-2-768x481.jpg" alt="" />
+                        <div class="content">Lorem ipsum dolor sit amet</div> </li>
+                
+                    <li class="showSlide fade"><img class="nolazy sd2-slide-background" src="https://3f2yjsz3q71x8x2b3bw93ad5-wpengine.netdna-ssl.com/wp-content/uploads/2017/01/Durable-Low-Maintenance-Fencing-for-Utility-Enclosures-2-768x481.jpg" alt="" />
+                        <div class="content">Lorem ipsum dolor sit amet</div> </li>
+                
+                    <li class="showSlide fade"><img class="nolazy sd2-slide-background" src="https://3f2yjsz3q71x8x2b3bw93ad5-wpengine.netdna-ssl.com/wp-content/uploads/2017/01/Easily-Adjust-Your-Fence-Line-to-Follow-Curves-2-768x481.jpg" alt="" />
+                        <div class="content">Lorem ipsum dolor sit amet</div> </li>
+                </ul>
+                            <!-- Navigation arrows -->  
+                            <nav class="trex-slide-nav">
+                    <a class="left-trx" onclick="nextSlide(-1)">❮</a>  
+                    <a class="right-trx" onclick="nextSlide(1)">❯</a>  
+                            </nav>
+            </div>
+
+                <ul id="thumbClick" class="thumbscontainer">  
+              
+                    <li class="thumbnail"><img src="https://3f2yjsz3q71x8x2b3bw93ad5-wpengine.netdna-ssl.com/wp-content/uploads/2017/01/trex-picture-portfolio-10-2-768x481.jpg" alt="A Trex Winchester Grey Seclusions backyard fence.">
+                        </li>
+                    <li class="thumbnail"><img class="nolazy sd2-slide-background" src="https://3f2yjsz3q71x8x2b3bw93ad5-wpengine.netdna-ssl.com/wp-content/uploads/2017/01/Trex-Seclusions-Saddle-Sidewalk-2-768x481.jpg" alt="A Trex Seclusions Saddle fence in a residential neigborhood." />
+                        </li>
+                
+                    <li class="thumbnail"><img class="nolazy sd2-slide-background" src="https://3f2yjsz3q71x8x2b3bw93ad5-wpengine.netdna-ssl.com/wp-content/uploads/2017/01/A-Beautiful-Backdrop-for-Your-Personal-Space-2-768x481.jpg" alt="" />
+                        </li>
+                
+                    <li class="thumbnail"><img class="nolazy sd2-slide-background" src="https://3f2yjsz3q71x8x2b3bw93ad5-wpengine.netdna-ssl.com/wp-content/uploads/2017/01/A-Tall-Fence-is-Easily-Acheivable-with-Trex-2-768x481.jpg" alt="" />
+                        </li>
+                
+                    <li class="thumbnail"><img class="nolazy sd2-slide-background" src="https://3f2yjsz3q71x8x2b3bw93ad5-wpengine.netdna-ssl.com/wp-content/uploads/2017/01/Trex-Seclusions-Saddle-Trees-2-768x481.jpg" alt="" />
+                        </li>
+                
+                    <li class="thumbnail"><img class="nolazy sd2-slide-background" src="https://3f2yjsz3q71x8x2b3bw93ad5-wpengine.netdna-ssl.com/wp-content/uploads/2017/01/Trex-Seclusions-Winchester-Grey-Section-2-768x481.jpg" alt="" />
+                        </li>
+                
+                    <li class="thumbnail"><img class="nolazy sd2-slide-background" src="https://3f2yjsz3q71x8x2b3bw93ad5-wpengine.netdna-ssl.com/wp-content/uploads/2017/01/Contractors-Love-Satisfied-Customers-2-768x481.jpg" alt="" />
+                        </li>
+                
+                    <li class="thumbnail"><img class="nolazy sd2-slide-background" src="https://3f2yjsz3q71x8x2b3bw93ad5-wpengine.netdna-ssl.com/wp-content/uploads/2017/01/Durable-Low-Maintenance-Fencing-for-Utility-Enclosures-2-768x481.jpg" alt="" />
+                        </li>
+                
+                    <li class="thumbnail"><img class="nolazy sd2-slide-background" src="https://3f2yjsz3q71x8x2b3bw93ad5-wpengine.netdna-ssl.com/wp-content/uploads/2017/01/Easily-Adjust-Your-Fence-Line-to-Follow-Curves-2-768x481.jpg" alt="" />
+                        </li>
+                </ul>
+     
+        </div>
+    </div>
+</div>
+<script type="text/javascript">  
+    var slide_index = 1;  
+    displaySlides(slide_index);  
+    function nextSlide(n) {  
+        displaySlides(slide_index += n);  
+    }  
+    function currentSlide(n) {  
+        displaySlides(slide_index = n);  
+    }  
+    function displaySlides(n) {  
+        var i;  
+        var slides = document.getElementsByClassName("showSlide");  
+        if (n > slides.length) { slide_index = 1 }  
+        if (n < 1) { slide_index = slides.length }  
+        for (i = 0; i < slides.length; i++) {  
+            slides[i].style.display = "none";  
+        }  
+        slides[slide_index - 1].style.display = "block";  
+    }  
+</script>   
+</body>
+</html>
